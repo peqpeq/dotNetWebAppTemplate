@@ -1,0 +1,10 @@
+// Install dotnet ef
+dotnet tool install --global dotnet-ef
+
+
+// Dotnet add migrations
+dotnet ef migrations add AppDbContext --project DAL.App.EF --startup-project WebApp
+
+
+// Dotnet update 
+dotnet ef database update InitialCreate --project DAL.App.EF --startup-project WebApp
