@@ -2,15 +2,11 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
-        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Contracts.DAL.Base\Contracts.DAL.Base.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <PackageReference Include="AutoMapper" Version="10.1.1" />
+      <ProjectReference Include="..\DAL.App.DTO\DAL.App.DTO.csproj" />
     </ItemGroup>
 
 </Project>

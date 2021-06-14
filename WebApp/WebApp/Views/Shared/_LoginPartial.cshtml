@@ -1,10 +1,10 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using Domain.App.Identity
-@inject SignInManager<AppUser<Guid>> SignInManager
-@inject UserManager<AppUser<Guid>> UserManager
+@inject SignInManager<AppUser> _signInManager
+@inject UserManager<AppUser> _userManager
 
 <ul class="navbar-nav">
-    @if (SignInManager.IsSignedIn(User))
+    @if (_signInManager.IsSignedIn(User))
     {
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name!</a>

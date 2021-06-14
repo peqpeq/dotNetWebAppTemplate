@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.11.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Contract.DTO.Base\Contract.DTO.Base.csproj" />
+      <ProjectReference Include="..\DAL.App.DTO\DAL.App.DTO.csproj" />
+      <ProjectReference Include="..\Domain.App\Domain.App.csproj" />
+    </ItemGroup>
+
+</Project>

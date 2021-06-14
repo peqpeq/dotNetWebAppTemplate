@@ -6,11 +6,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Contracts.DAL.Base\Contracts.DAL.Base.csproj" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.5" />
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="AutoMapper" Version="10.1.1" />
+      <ProjectReference Include="..\DAL.Base\DAL.Base.csproj" />
     </ItemGroup>
 
 </Project>

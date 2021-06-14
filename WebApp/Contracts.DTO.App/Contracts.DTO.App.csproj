@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Contract.DTO.Base\Contract.DTO.Base.csproj" />
+      <ProjectReference Include="..\Domain.App\Domain.App.csproj" />
+      <ProjectReference Include="..\PublicApi.DTO.v1\PublicApi.DTO.v1.csproj" />
+    </ItemGroup>
+
+</Project>

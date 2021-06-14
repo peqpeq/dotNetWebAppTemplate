@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -7,7 +9,6 @@ using Contracts.DAL.Base;
 using Contracts.Domain;
 using Domain.App.Entity;
 using Domain.App.Identity;
-using Domain.Base;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -62,7 +63,7 @@ namespace DAL.App.EF
              var markedAsAdded = ChangeTracker.Entries().Where(x => x.State == EntityState.Added);
              foreach (var entityEntry in markedAsAdded)
              {
-                 if (!(entityEntry.Entity is IDomainEntityMetadata entityWithMetaData)) continue;
+                 if (entityEntry.Entity is not IDomainEntityMetadata entityWithMetaData) continue;
                  entityWithMetaData.CreatedAt = DateTime.Now;
                  entityWithMetaData.CreatedBy = "_userNameProvider.CurrentUserName";
 
